@@ -1,16 +1,12 @@
 package com.twlkyao.generics;
+
 public class Generics {
 	
-	public static void m1(String s, String... ss) {
-        for (int i = 0; i < ss.length; i++) {
-            System.out.println(ss[i]);
-        }
-    }
-
-    public static void main(String[] args) {
-
-        m1(""); // Because the ss.length is zero.
-        m1("aaa"); // Because the ss.length is zero.
-        m1("aaa", "bbb", "ccc");
-    }
+	public static void main(String[] args) {
+		Point<Object> point= new Point<Object>();
+		point.setVar(20);
+		point.setYar("30");
+		System.out.println("x coordinate: " +point.getVar());
+		System.out.println("y coordinate: " +point.getYar());
+	}
 }
